@@ -1,5 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The functions makeCacheMatrix and cacheSolve enables you to create a
+## special matrix object that can cache its inverse.  Calculating the
+## inverse of a matrix can be a costly computation and unless the matrix
+## has changed, using a cached inverse is much more efficient.
+##
+## Assumptions:
+## 1) Matrix supplied to makeCacheMatrix is always invertible
 
 ## This function creates a special matrix object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
