@@ -42,15 +42,15 @@ makeCacheMatrix <- function(x = matrix()) {
 ## cacheSolve calculates and caches the inverse of a special matrix object
 ## created by the makeCacheMatrix function.
 cacheSolve <- function(x, ...) {
-  # Get the current inverse from the matrix x
+  # Get the current inverse from the special matrix x
   m <- x$getinverse()
   
   # If the curent inverse of x is not NULL then use cached data
   if (!is.null(m)) {
-    # Display a message 
+    # Display a message notifying the user that cached data is used
     message("getting cached data")
     
-    # Return the current inverse
+    # Return the current cached inverse from special matrix x
     return(m)
   }
   # Get the stored matrix
